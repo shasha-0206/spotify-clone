@@ -1,5 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import { assets } from '../assets/frontend-assets/assets.js'
 const Sidebar = () => {
+
+    const navigate = useNavigate()
+    const Yoursongs = () =>{
+        navigate('/Yoursongs');
+    }
     return (
         <div className='w-[25%] h-full p-2 flex-col gap-2 text-white hidden lg:flex'>
 
@@ -31,7 +37,7 @@ const Sidebar = () => {
                         <img className="w-8" src={assets.stack_icon} />
                         <p className='font-semibold'>Your Library</p>
                     </div>
-                    
+
                     {/* arrow and plus icons */}
                     <div className='flex items-center gap-3'>
                         <img className="w-5" src={assets.arrow_icon} />
@@ -39,21 +45,20 @@ const Sidebar = () => {
 
                     </div>
                 </div>
-                
-                {/* create your playlist section */}
-                <div className='p-4 bg-[#242424] rounded m-2 font-semibold flex flex-col items-start justify-start gap-1 pl-4'>
-                    <h1 >Create Your First Playlist</h1>
-                    <p className='font-light '>Its easy we will help you</p>
-                    <button className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>Create Playlist</button>
-                    
+
+                {/* liked / Your songs */}
+                <div className="sidebar-item flex items-center p-3 rounded-md hover:bg-[#333] cursor-pointer" onClick={Yoursongs} >
+                    <img
+                        style={{ width: '50px', height: '50px', borderRadius: '4px' }}
+                        src="https://media.wired.com/photos/5926df59f3e2356fd800ab80/master/w_2560%2Cc_limit/GettyImages-543338600-S2.jpg"
+                        alt="Music"
+                    />
+                    <div className="ml-4">
+                        <p className="text-white font-semibold">Your Songs</p>
+                        <p className="text-gray-400 text-sm">PlayList</p>
+                    </div>
                 </div>
 
-                <div className='p-4 bg-[#242424] rounded m-2 font-semibold flex flex-col items-start justify-start gap-1 pl-4 mt-4'>
-                    <h1 >Lets find some podcast to follow</h1>
-                    <p className='font-light '>we will keep you update on new episodes</p>
-                    <button className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>Browse Podcast</button>
-                    
-                </div>
             </div>
         </div>
     )
