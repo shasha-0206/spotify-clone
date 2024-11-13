@@ -13,7 +13,7 @@ const Player = () => {
             <img className ="w-12 " src={track.image} />
             <div>
                 <p>{track.name}</p>
-                <p>{track.desc.slice(0,12)}</p>
+                <p>{track.desc ? track.desc.slice(0, 12) : 'No description'}</p>
             </div>
 
         </div>

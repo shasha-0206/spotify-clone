@@ -73,25 +73,6 @@ app.get('/songs', async (req, res) => {
     }
 });
 
-
-app.get('/songs/:id', async (req, res) => {
-    try {
-        const songId = req.params.id; // Get song ID from the URL params
-        const song = await Song.findById(songId); // Query the song from MongoDB using Mongoose
-
-        if (!song) {
-            return res.status(404).json({ message: 'Song not found' });
-        }
-
-        // If the song is found, return it
-        res.json(song);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Server error' });
-    }
-});
-
-
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

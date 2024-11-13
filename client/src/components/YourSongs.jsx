@@ -60,11 +60,11 @@ function YourSongs() {
                             <p className='text-[15px] hidden sm:block'>2 days ago</p>
                             <p className='text-[15px] text-center'>{song.duration}</p>
 
-                            {
+                            {/* {
                                 <audio controls className='text-center'>
                                     <source src={song.audioFile} type="audio/mp3" />
                                 </audio>
-                            }
+                            } */}
                         </div>
                     ))
                 }
