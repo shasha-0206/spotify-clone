@@ -2,7 +2,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import axios from 'axios';
 import Song from './Model/SongSchema.js';
 import fs from 'fs'
 
@@ -56,11 +55,11 @@ async function uploadOrUpdateSong(title, artist, audioFilePath, imageFilePath, d
 
 // to add songs
 // uploadOrUpdateSong(
-//     "Vikram Title Track",
+//     "Luckanna Mate Nillu",
 //     "Anirudh Ravichander",
-//      "c:\\Users\\malkh\\Downloads\\[iSongs.info] 02 - Vikram Title Track (Telugu).mp3",
-//      "C:\\Users\\malkh\\Desktop\\Camera Roll\\spotify\\Screenshot 2024-11-12 223047.png",
-//      "3:38"
+//      "c:\\Users\\malkh\\Downloads\\Luckkanna Mate Nillu - SenSongsMp3.Co.mp3",
+//      "C:\\Users\\malkh\\Desktop\\Camera Roll\\spotify\\Screenshot 2024-11-12 231618.png",
+//      "3:30"
 // )
 
 
