@@ -1,5 +1,7 @@
 Spotify Clone - MERN Stack
-![Uploading image.png…]()
+
+![image](https://github.com/user-attachments/assets/c33afa0c-c63a-49e0-9cd8-9004a811aca0)
+
 
 This project is a clone of Spotify built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to browse, play, and manage songs. A few songs are stored in MongoDB, with the ability to play them directly from the app. It mimics Spotify's user interface and functionality while utilizing modern web development tools and technologies.
 
